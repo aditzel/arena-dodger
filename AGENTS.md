@@ -60,3 +60,10 @@ Agents in environments without Godot installed should still keep `scripts/smoke.
 - Use typed GDScript where practical (`:=`, return types).
 - Enemy/player art stays procedural polygons (cyan square player, red diamond enemies).
 - After structural changes, verify `run/main_scene` still points at `res://scenes/main.tscn`.
+
+## Cursor Cloud specific instructions
+
+- The environment install puts Godot **4.7.2** standard (not .NET) on `PATH` as `godot` and `godot4` (`/opt/godot/Godot_v4.7.2-stable_linux.x86_64`).
+- This VM has no GPU. Forward+ uses lavapipe from `mesa-vulkan-drivers`.
+- There is no sound card. Godot logs an ALSA open error and falls back to the dummy audio driver. That warning is expected.
+- Check the project with `./scripts/smoke.sh`. To play on the desktop display: `godot --path .` (the window title is `Arena Dodger (DEBUG)`).
