@@ -60,3 +60,17 @@ Agents in environments without Godot installed should still keep `scripts/smoke.
 - Use typed GDScript where practical (`:=`, return types).
 - Enemy/player art stays procedural polygons (cyan square player, red diamond enemies).
 - After structural changes, verify `run/main_scene` still points at `res://scenes/main.tscn`.
+
+## Commits and pull requests
+
+These apply to new commits and PRs; existing history is not rewritten.
+
+- Write commit subjects in [Conventional Commits](https://www.conventionalcommits.org/) form, for example `feat: add enemy spawn ramp`, `fix: clamp player to arena` or `docs: update smoke requirements`.
+- Use the same Conventional form for PR titles.
+- When a coding agent writes or co-writes a commit, add a `Co-authored-by` trailer for that agent. For Factory Droid:
+
+  ```text
+  Co-authored-by: factory-droid[bot] <138933559+factory-droid[bot]@users.noreply.github.com>
+  ```
+
+- These conventions are not enforced by tooling.
